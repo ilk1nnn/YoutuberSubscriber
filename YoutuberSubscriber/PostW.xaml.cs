@@ -57,17 +57,43 @@ namespace YoutuberSubscriber
                 var post = new PostUC();
                 post.titlelbl.Content = p.Content.ToString();
 
-                
+                //MemoryStream ms = new MemoryStream();  // no using here! BitmapImage will dispose the stream after loading
+                //p.PostImage.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+
+                //BitmapImage ix = new BitmapImage();
+                //ix.BeginInit();
+                //ix.CacheOption = BitmapCacheOption.OnLoad;
+                //ix.StreamSource = ms;
+                //ix.EndInit();
+
+
+                //post.postimg.Source = ix;
+
+
+
+                using (var memory = new MemoryStream())
+                {
+                    p.PostImage.Save(memory, ImageFormat.Png);
+                    memory.Position = 0;
+
+                    var bitmapImage = new BitmapImage();
+                    bitmapImage.BeginInit();
+                    bitmapImage.StreamSource = memory;
+                    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmapImage.EndInit();
+
+
+                    post.postimg.Source = bitmapImage;
+
+                }
 
 
 
 
-                
-                
 
 
-
-                allpostsstackpanel.Children.Add(post);
+                allpostsstackpanel.Height += 300;
+               allpostsstackpanel.Children.Add(post);
             }
 
 

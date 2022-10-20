@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:YoutuberSubscriber"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="200">
+             d:DesignHeight="100" d:DesignWidth="100">
     <Grid Background="MediumPurple">
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"></RowDefinition>
@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <Image Name="postimg"></Image>
+            <Image Stretch="Fill" Name="postimg"></Image>
         </Grid>
 
         <Grid Grid.Row="1">

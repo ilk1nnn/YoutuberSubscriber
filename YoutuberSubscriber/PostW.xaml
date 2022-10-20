@@ -6,13 +6,16 @@
         xmlns:local="clr-namespace:YoutuberSubscriber"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="PostW" Height="450" Width="800">
+        Title="PostW" Height="450" Width="300">
     <Grid  Background="MediumPurple">
 
-
-        <StackPanel Name="allpostsstackpanel">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            
+        <StackPanel Margin="50,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" Name="allpostsstackpanel" Width="200" Height="0" HorizontalAlignment="Left">
             
         </StackPanel>
+        </ScrollViewer>
+
         
         
     </Grid>

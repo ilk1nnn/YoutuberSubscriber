@@ -33,7 +33,9 @@ namespace YoutuberSubscriber
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            var allpost = new PostW();
+            allpost.Show();
         }
     }
 }

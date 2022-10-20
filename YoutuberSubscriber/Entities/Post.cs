@@ -5,18 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-
+using Image2 = System.Drawing.Image;
 namespace YoutuberSubscriber.Entities
 {
     public class Post
     {
-        public Post(string content, Bitmap postImage)
+        public Post(string content,Image2 postImage)
         {
             Content = content;
             PostImage = postImage;
         }
 
         public string Content { get; set; }
-        public Bitmap PostImage { get; set; }
+        public Image2 PostImage { get; set; }
     }
 }

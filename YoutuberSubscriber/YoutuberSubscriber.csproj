@@ -35,12 +35,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Consul, Version=1.6.10.7, Culture=neutral, PublicKeyToken=20a6ad9a81df1d95, processorArchitecture=MSIL">
+      <HintPath>..\packages\Consul.1.6.10.7\lib\net461\Consul.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -73,6 +77,12 @@
     <Compile Include="NotificationW.xaml.cs">
       <DependentUpon>NotificationW.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PostUC.xaml.cs">
+      <DependentUpon>PostUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostW.xaml.cs">
+      <DependentUpon>PostW.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShowSubscriberW.xaml.cs">
       <DependentUpon>ShowSubscriberW.xaml</DependentUpon>
     </Compile>
@@ -103,6 +113,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NotificationW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostW.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

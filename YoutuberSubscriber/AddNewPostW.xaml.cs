@@ -18,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using YoutuberSubscriber.Database;
 using YoutuberSubscriber.Entities;
+using Image = System.Windows.Controls.Image;
 
 namespace YoutuberSubscriber
 {
@@ -75,6 +76,7 @@ namespace YoutuberSubscriber
 
         private void postbtn_Click(object sender, RoutedEventArgs e)
         {
+            ImageSourceConverter c = new ImageSourceConverter();
             Post post = new Post(titletxtb.Text, Photo);
             DataBase.youtuber.Posts.Add(post);
             //foreach (var sub in DataBase.subscribers)

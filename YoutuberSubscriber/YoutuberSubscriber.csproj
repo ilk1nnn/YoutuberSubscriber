@@ -55,12 +55,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddNewPostW.xaml.cs">
+      <DependentUpon>AddNewPostW.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DataBase.cs" />
+    <Compile Include="Entities\Notification.cs" />
+    <Compile Include="Entities\Post.cs" />
+    <Compile Include="Entities\Subscriber.cs" />
+    <Compile Include="Entities\Youtuber.cs" />
     <Compile Include="ShowSubscriberW.xaml.cs">
       <DependentUpon>ShowSubscriberW.xaml</DependentUpon>
     </Compile>
     <Compile Include="YoutuberW.xaml.cs">
       <DependentUpon>YoutuberW.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddNewPostW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

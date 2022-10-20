@@ -25,42 +25,16 @@ namespace YoutuberSubscriber
         }
 
 
-        class Subscriber
-        {
-            public string Username { get; set; }
-            public string Password { get; set; }
-        }
-
-        List<Subscriber> subscribers = new List<Subscriber>
-        {
-
-
-            new Subscriber
-            {
-                Username = "admin1",
-                Password ="admin1"
-            },
-            new Subscriber
-            {
-                Username = "admin2",
-                Password="admin2"
-            },
-            new Subscriber
-            {
-                Username = "admin3",
-                Password="admin3"
-            },
-            new Subscriber
-            {
-                Username="admin4",
-                Password = "admin4"
-            }
-
-        };
-
         private void ShowSub(object sender, RoutedEventArgs e)
         {
-            
+            this.Close();
+            Window ssw = new ShowSubscriberW();
+            ssw.Show();
+        }
+
+        private void AddNewPostBtn(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

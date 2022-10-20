@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using YoutuberSubscriber.Database;
 
 namespace YoutuberSubscriber
 {
@@ -22,6 +23,14 @@ namespace YoutuberSubscriber
         public ShowSubscriberW()
         {
             InitializeComponent();
+
+
+
+            foreach (var item in DataBase.subscribers)
+            {
+                var username = item.Username;
+                subscriberlistbox.Items.Add(username);
+            }
         }
     }
 }

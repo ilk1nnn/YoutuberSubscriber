@@ -34,7 +34,9 @@ namespace YoutuberSubscriber
 
         private void AddNewPostBtn(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            Window anp = new AddNewPostW();
+            anp.Show();
         }
     }
 }

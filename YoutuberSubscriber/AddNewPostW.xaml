@@ -5,15 +5,127 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YoutuberSubscriber"
         mc:Ignorable="d"
-        Title="AddNewPostW" Height="450" Width="800"
+        Title="AddNewPostW" Height="450" Width="600"
         WindowStartupLocation="CenterScreen">
-    
-    
-    
-    <Grid>
-        
 
-        
+
+
+    <Grid Background="#660066">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+           
+
+                <Image Width="420" Height="250" Margin="-150,0,0,0" Name="postimg">
+                    
+                </Image>
+
+          
+        </Grid>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Button Name="loadimgbtn"                         
+                            BorderThickness="0"
+                            Content="Load Image"
+                            Foreground="White"
+                            FontSize="15"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="-150,50,0,0" Click="loadimgbtn_Click"
+                            >
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="120" Height="35"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Name="postbtn"                         
+                            BorderThickness="0"
+                            Content="Post Image"
+                            Foreground="White"
+                            FontSize="15"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="120,50,0,0" Click="postbtn_Click"
+                            >
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="120" Height="35"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <Label FontSize="20" Margin="10,25,0,0" Foreground="Red" Content="*Enter Title:"> </Label>
+                <TextBox Name="titletxtb"
+                             FontSize="15"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2"
+                             Height="35"
+                         Width="250"
+                             VerticalContentAlignment="Center"
+                             Margin="-20,40,0,0"
+                             Padding="10,0,0,0">
+
+                    <TextBox.Background>
+                        <ImageBrush
+                                        Stretch="None"
+                                        AlignmentX="Left"/>
+                    </TextBox.Background>
+                </TextBox>
+            </Grid>
+            
+        </Grid>
         
     
     </Grid>

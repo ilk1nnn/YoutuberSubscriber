@@ -67,13 +67,26 @@
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Subscriber.cs" />
     <Compile Include="Entities\Youtuber.cs" />
+    <Compile Include="LoginW.xaml.cs">
+      <DependentUpon>LoginW.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationW.xaml.cs">
+      <DependentUpon>NotificationW.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShowSubscriberW.xaml.cs">
       <DependentUpon>ShowSubscriberW.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriberW.xaml.cs">
+      <DependentUpon>SubscriberW.xaml</DependentUpon>
     </Compile>
     <Compile Include="YoutuberW.xaml.cs">
       <DependentUpon>YoutuberW.xaml</DependentUpon>
     </Compile>
     <Page Include="AddNewPostW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginW.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -89,7 +102,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NotificationW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ShowSubscriberW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubscriberW.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

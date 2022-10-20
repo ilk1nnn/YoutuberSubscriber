@@ -1,15 +1,12 @@
-﻿<Window x:Class="YoutuberSubscriber.ShowSubscriberW"
+﻿<Window x:Class="YoutuberSubscriber.NotificationW"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YoutuberSubscriber"
         mc:Ignorable="d"
-        Title="ShowSubscriberW" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
-    
-    
-    
+        WindowStartupLocation="CenterScreen"
+        Title="NotificationW" Height="450" Width="800">
     <Grid Background="MediumPurple">
 
         <Grid.RowDefinitions>
@@ -18,18 +15,14 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="1">
-            <ListBox Background="MediumPurple" Name="subscriberlistbox" Foreground="White" FontSize="20">
+            <ListBox Background="MediumPurple" Name="notificationlistbox" Foreground="White" FontSize="20">
 
             </ListBox>
         </Grid>
 
         <Grid Grid.Row="0">
-            <Label Content="All Subscribers:" FontWeight="Medium" FontSize="30"></Label>
+            <Label Content="Your Notifications:" FontWeight="Medium" FontSize="30"></Label>
         </Grid>
-        
+
     </Grid>
-    
-    
-    
-    
 </Window>

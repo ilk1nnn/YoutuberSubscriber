@@ -77,10 +77,11 @@ namespace YoutuberSubscriber
         {
             Post post = new Post(titletxtb.Text, Photo);
             DataBase.youtuber.Posts.Add(post);
-            foreach (var sub in DataBase.subscribers)
-            {
-                sub.Notifications.Add(new Notification(DataBase.youtuber, $"{DataBase.youtuber.Username} posted ({titletxtb.Text}) at {DateTime.Now.ToString()}"));
-            }
+            //foreach (var sub in DataBase.subscribers)
+            //{
+            //    sub.Notifications.Add(new Notification(DataBase.youtuber, $"{DataBase.youtuber.Username} posted ({titletxtb.Text}) at {DateTime.Now.ToString()}"));
+            //}
+            DataBase.notifications.Add(new Notification(DataBase.youtuber, $"{DataBase.youtuber.Username} posted ({titletxtb.Text}) at {DateTime.Now.ToString()}"));
             MessageBox.Show($"{DataBase.youtuber.Username}, Post Added Successfully!");
         }
     }

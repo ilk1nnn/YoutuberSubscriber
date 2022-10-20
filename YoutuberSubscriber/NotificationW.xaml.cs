@@ -10,31 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using YoutuberSubscriber.Database;
 
 namespace YoutuberSubscriber
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NotificationW.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NotificationW : Window
     {
-        public MainWindow()
+        public NotificationW()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var youtuberwindow = new YoutuberW();
-            youtuberwindow.Show();
-        }
+            foreach (var item in DataBase.notifications)
+            {
+                var notification = item.Title;
+                notificationlistbox.Items.Add(notification);
+            }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            var login = new LoginW();
-            login.Show();
         }
     }
 }

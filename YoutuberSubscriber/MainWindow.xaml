@@ -16,8 +16,8 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="2"></RowDefinition>
-            <RowDefinition ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
 
